@@ -1,9 +1,8 @@
-# Part 1: Baseline Grokking
+# Part 2: Fourier Sparsity Analysis
 
-This part reproduces the grokking phenomenon on modular addition `(a + b) mod 31`.
-    
-The model perfectly memorizes the training data before test loss suddenly collapses thousands of epochs later.
+This part extracts the learned embedding matrix and MLP activations.
+By applying a 1D Discrete Fourier Transform, we demonstrate the network maps inputs to a sparse set of key frequencies.
 
-![Grokking Baseline](./grokking_loss.png)
+![Fourier Sparsity](./fourier_sparsity.png)
 
-Run `train.py` or `run_grokking.py` to reproduce.
+Run `fourier_analysis.py` to reproduce.
