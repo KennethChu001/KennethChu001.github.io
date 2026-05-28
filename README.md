@@ -1,5 +1,32 @@
-# The “Aha!” Moment: Understanding Grokking in AI - Kenneth Chu LIA
+# Grokking Research Repository
 
-Grokking is a phenomenon in machine learning where a model suddenly learns to generalize long after it has seemingly overfitted the training data. In a typical training scenario, once a model achieves near-zero training error while validation error remains high, we assume it has simply memorized the noise. However, if training continues well past this point of apparent convergence, the validation accuracy can suddenly “click” and shoot up to near-perfect levels. This dramatic leap suggests that the network has undergone a phase transition—moving from a complex, memorized solution to a simpler, more robust internal representation of the underlying rules.
+This repository contains code and experimental results for reproducing and studying the phenomenon of **Grokking** (delayed generalization) in neural networks. 
 
-This project will investigate grokking phenomena using a one-layer transformer model on modular arithmetic tasks. We will analyze this process through the lens of mechanistic interpretability, a field dedicated to reverse-engineering the internal weights and activations of a neural network to identify the human-understandable algorithms or "circuits" it has learned. By doing so, we aim to uncover how the model transitions from rote memorization of the training set to a coherent, generalizable understanding of the underlying mathematical structure.
+## 🌐 Online Report
+A highly polished, publicly accessible online report presenting our findings is available via **GitHub Pages**.
+
+👉 **[View the Research Report Here](https://<username>.github.io/<repository-name>/)** 
+*(Assuming GitHub Pages is enabled from the `/docs` directory)*
+
+## Repository Structure
+
+The research is divided into 6 distinct parts, covering different aspects of the grokking phenomenon. Code to run each part's experiments is included in its respective directory:
+
+- **Part 1: Baseline Grokking** (`/Part1_Baseline_Grokking`) - Standard setup showing the baseline double-descent in time on modular addition.
+- **Part 2: Fourier Sparsity** (`/Part2_Fourier_Sparsity`) - Analysis of the discrete Fourier transform and how the model discovers sparse Fourier circuits.
+- **Part 3: Three Phases** (`/Part3_Three_Phases`) - The decomposition of training into Memorization, Circuit Formation, and Cleanup via restricted/excluded loss.
+- **Part 4: Data Scarcity** (`/Part4_Data_Scarcity`) - Fraction sweep experiments identifying the transition threshold between non-grokking and grokking regimes.
+- **Part 5: AI Alignment** (`/Part5_AI_Alignment`) - Discussion on how mechanistic interpretability of grokking informs AI Alignment and inner alignment testing.
+- **Part 6: Modular Multiplication** (`/Part6_Modular_Multiplication`) - Grokking on a harder group structure requiring discrete-logarithm mapping, and multi-task co-grokking experiments.
+
+## Running the Code
+Each sub-directory contains Python scripts designed to run on PyTorch.
+Refer to the `README.md` in each individual directory for execution instructions and hyperparameters.
+
+## Serving the Report Locally
+To view the report locally before pushing to GitHub Pages, you can use any static server from the `docs` folder:
+```bash
+npx serve docs
+# or
+python -m http.server 8000 -d docs
+```
