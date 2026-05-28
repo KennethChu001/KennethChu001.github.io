@@ -5,8 +5,7 @@ This repository contains code and experimental results for reproducing and study
 ## 🌐 Online Report
 A highly polished, publicly accessible online report presenting our findings is available via **GitHub Pages**.
 
-👉 **[View the Research Report Here](https://<username>.github.io/<repository-name>/)** 
-*(Assuming GitHub Pages is enabled from the `/docs` directory)*
+👉 **[View the Research Report Here](https://KennethChu001.github.io/)**
 
 ## Repository Structure
 
