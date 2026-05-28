@@ -5,4 +5,4 @@ Grokking is a phenomenon in machine learning where a model suddenly learns to ge
 This project will investigate grokking phenomena using a one-layer transformer model on modular arithmetic tasks. We will analyze this process through the lens of mechanistic interpretability, a field dedicated to reverse-engineering the internal weights and activations of a neural network to identify the human-understandable algorithms or "circuits" it has learned. By doing so, we aim to uncover how the model transitions from rote memorization of the training set to a coherent, generalizable understanding of the underlying mathematical structure.
 
 *******************
-The main branch includes this readme and the full raw grokking developped with Antigravity. The components of this project are in the other branches containing the code and visualization of each part.
+The main branch includes this readme and the full raw grokking report developped with Antigravity. The components of this project are in the other branches containing the code and visualization of each part.
