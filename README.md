@@ -1,6 +1,9 @@
-# KennethChu001.github.io
-The “Aha!” Moment: Understanding Grokking in AI - Kenneth Chu LIA
+# Part 1: Baseline Grokking
 
-Grokking is a phenomenon in machine learning where a model suddenly learns to generalize long after it has seemingly overfitted the training data. In a typical training scenario, once a model achieves near-zero training error while validation error remains high, we assume it has simply memorized the noise. However, if training continues well past this point of apparent convergence, the validation accuracy can suddenly “click” and shoot up to near-perfect levels. This dramatic leap suggests that the network has undergone a phase transition—moving from a complex, memorized solution to a simpler, more robust internal representation of the underlying rules.
+This part reproduces the grokking phenomenon on modular addition `(a + b) mod 31`.
+    
+The model perfectly memorizes the training data before test loss suddenly collapses thousands of epochs later.
 
-This project will investigate grokking phenomena using a one-layer transformer model on modular arithmetic tasks. We will analyze this process through the lens of mechanistic interpretability, a field dedicated to reverse-engineering the internal weights and activations of a neural network to identify the human-understandable algorithms or "circuits" it has learned. By doing so, we aim to uncover how the model transitions from rote memorization of the training set to a coherent, generalizable understanding of the underlying mathematical structure.
+![Grokking Baseline](./grokking_loss.png)
+
+Run `train.py` or `run_grokking.py` to reproduce.
